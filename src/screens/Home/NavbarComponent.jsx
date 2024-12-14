@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import logo from '../../assets/logo.png'
-import { useNavigate } from 'react-router-dom'
+
 const NavbarContainer = styled.div`
   height: ${({isFullScreen}) => isFullScreen ? '0' : '3rem'};
   background: #1e1e1e;
@@ -34,12 +34,18 @@ const MainHeading = styled.h1`
   }
 `
 
-const Navbar = ({ isFullScreen }) => {
-  const navigate = useNavigate()
+const NavbarComponent = ({ isFullScreen }) => {
+
   return (
-    <NavbarContainer isFullScreen={isFullScreen}>
+    <NavbarContainer style={{
+      position: "relative",
+      zIndex: 1,
+      color: "white",
+      textAlign: "center",
+      fontFamily: "Arial, sans-serif",
+    }} isFullScreen={isFullScreen}>
       <NavbarContent onClick={() => {
-        navigate('/')
+      
       }}>
         <Logo src={logo} />
         <MainHeading>
@@ -50,4 +56,4 @@ const Navbar = ({ isFullScreen }) => {
   )
 }
 
-export default Navbar
+export default NavbarComponent

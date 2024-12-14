@@ -4,6 +4,7 @@ import LeftComponent from './LeftComponent'
 import RightComponent from './RightComponent'
 import Modal from '../../components/Modal'
 import { ModalContext } from '../../context/ModalContext'
+import NavbarComponent from './NavbarComponent'
 
 const StyledHome = styled.div`
   width: 100%;
@@ -12,15 +13,13 @@ const StyledHome = styled.div`
 
 const Home = () => {
   const {isOpenModal} = useContext(ModalContext);
-  
+
   return (
     <StyledHome>
+      <NavbarComponent/>
       <div>
-        <homeNavbar/>
-      </div>
-      <div>
-      <LeftComponent />
-      <RightComponent />
+        <LeftComponent />
+        <RightComponent />
       </div>
       { isOpenModal.show && <Modal />}
     </StyledHome>

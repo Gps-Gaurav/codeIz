@@ -14,6 +14,7 @@ const StyledRightComponent = styled.div`
     right: 0;
     width: 70%;
     padding: 2rem;
+    margin-top: 3rem;
 
     @media (max-width: 768px){
         position: relative;
