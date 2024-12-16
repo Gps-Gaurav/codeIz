@@ -39,14 +39,24 @@ const PlaygroundProvider = ({ children }) => {
             title: "DSA",
             playgrounds: {
                 [uuid()]: {
-                    title: "Stack Implementation",
+                    title: "Queue",
                     language: "cpp",
                     code: languageMap["cpp"].defaultCode,
                 },
                 [uuid()]: {
-                    name: "Array",
+                    title: "Array",
                     language: "javascript",
                     code: languageMap["javascript"].defaultCode,
+                },
+                [uuid()]: {
+                    title: "Linked List",
+                    language: "java",
+                    code: languageMap["java"].defaultCode,
+                },
+                [uuid()]: {
+                    title: "Stack",
+                    language: "python",
+                    code: languageMap["python"].defaultCode,
                 },
             }
         },
